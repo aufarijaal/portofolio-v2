@@ -11,7 +11,7 @@ const SkillSection = async () => {
   }`);
 
   return (
-    <div className="container relative mb-20">
+    <div id="skills-section" className="container relative mb-20">
       <div className="mx-auto max-w-2xl py-10 lg:max-w-7xl lg:px-12 flex flex-col gap-2 rounded-md">
         <div className="flex flex-col gap-6 items-center">
           <div className="flex flex-col gap-2 text-center">

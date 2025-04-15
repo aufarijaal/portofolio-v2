@@ -38,5 +38,11 @@ export const showcase = defineType({
         },
      ]
     }),
+    defineField({
+      name: 'showInHome',
+      title: 'Show in Home',
+      type: 'boolean',
+      initialValue: false,
+    })
   ],
 })

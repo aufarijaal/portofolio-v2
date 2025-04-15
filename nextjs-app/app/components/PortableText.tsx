@@ -87,7 +87,7 @@ export default function CustomPortableText({
 
   return (
     <div
-      className={["prose prose-a:text-red-500", className]
+      className={["prose prose-a:text-green-500", className]
         .filter(Boolean)
         .join(" ")}
     >

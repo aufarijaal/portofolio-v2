@@ -24,19 +24,19 @@ export default async function Header() {
                 <Link href="/" className="">
                   Home
                 </Link>
-                <Link href="#showcase-section" className="">
+                <Link href="/#showcase-section" className="">
                   Showcase
                 </Link>
-                <Link href="#skills-section" className="">
+                <Link href="/#skills-section" className="">
                   Skills
                 </Link>
-                <Link href="#certificates-section" className="">
+                <Link href="/#certificates-section" className="">
                   Certificates
                 </Link>
-                <Link href="#contact-section" className="">
+                <Link href="/#contact-section" className="">
                   Contact
                 </Link>
-                <Link href="/blog" className="">
+                <Link href="/posts" className="">
                   Blog
                 </Link>
               </li>

@@ -20,7 +20,7 @@ const Post = ({ post }: { post: PostType }) => {
 
       <h3 className="mt-3 text-2xl font-semibold">
         <Link
-          className="hover:text-red-500 underline transition-colors"
+          className="hover:text-green-500 underline transition-colors"
           href={`/posts/${slug}`}
         >
           {title}

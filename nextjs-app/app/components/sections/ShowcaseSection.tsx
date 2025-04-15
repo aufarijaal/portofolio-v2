@@ -5,7 +5,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 
 const ShowcaseSection = async () => {
-  const projects = await client.fetch(`*[_type == "showcase"]{
+  const projects = await client.fetch(`*[_type == "showcase"][showInHome == true]{
     _key,
     title,
     description,
@@ -18,7 +18,7 @@ const ShowcaseSection = async () => {
   }`);
 
   return (
-    <div className="container relative mb-20">
+    <div id="showcase-section" className="container relative mb-20">
       <div className="mx-auto max-w-2xl py-10 lg:max-w-7xl lg:px-12 bg-white border border-gray-50 backdrop-blur-sm flex flex-col gap-2 rounded-md">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
@@ -40,7 +40,7 @@ const ShowcaseSection = async () => {
               <div className="project-description flex flex-col gap-2">
                 <h5 className="font-bold"></h5>
                 <h3 className="font-bold text-3xl">{project?.title}</h3>
-                {/* <p className="text-gray-500 max-w-md">{project?.description}</p> */}
+                <p className="text-gray-500 max-w-md">{project?.description}</p>
                 <div className="mt-2">
                   <ul className="flex gap-6">
                     {project.technologies.map((tech: any, index: number) => (
@@ -52,7 +52,7 @@ const ShowcaseSection = async () => {
                 </div>
               </div>
               <div className="project-image">
-                <img className="max-w-lg" src={project?.imageUrl} alt="" />
+                <img className="max-w-lg max-h-60 border" src={project?.imageUrl} alt="" />
               </div>
             </div>
           ))}
