@@ -12,7 +12,7 @@ export default async function Header() {
       <div className="container py-6 sm:px-6">
         <div className="flex items-center justify-between gap-5">
           <Link className="flex items-center gap-2" href="/">
-            <img className="h-[48px]" src="icon.svg" alt="logo" />
+            <img className="h-[48px]" src="/icon.svg" alt="logo" />
           </Link>
 
           <nav className="">
@@ -36,7 +36,7 @@ export default async function Header() {
                 <Link href="/#contact-section" className="">
                   Contact
                 </Link>
-                <Link href="/posts" className="">
+                <Link href="/posts-search" className="">
                   Blog
                 </Link>
               </li>

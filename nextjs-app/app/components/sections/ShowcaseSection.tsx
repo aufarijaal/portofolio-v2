@@ -60,7 +60,7 @@ const ShowcaseSection = async () => {
 
         <div className="mt-10 mx-auto">
           <Link
-            href="/projects"
+            href="/showcase"
             className="rounded-full flex gap-2 items-center bg-black hover:bg-green-500 focus:bg-cyan-500 p-1 sm:py-3 sm:px-6 text-white transition-colors duration-200 w-max"
           >
             See all projects

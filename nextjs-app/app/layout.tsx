@@ -16,6 +16,7 @@ import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { handleError } from "./client-utils";
+import NextTopLoader from "nextjs-toploader";
 
 /**
  * Generate metadata for the page.
@@ -72,8 +73,20 @@ export default async function RootLayout({
   const { isEnabled: isDraftMode } = await draftMode();
 
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable} bg-white text-black`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrains.variable} bg-white text-black`}
+    >
       <body className="topography-bg">
+        <NextTopLoader
+          color="#000000"
+          showSpinner={false}
+          initialPosition={0.08}
+          crawlSpeed={200}
+          easing="ease"
+          height={3}
+          shadow="0 0 10px rgba(0, 0, 0, 0.5)"
+        />
         <section className="min-h-screen pt-24">
           {/* The <Toaster> component is responsible for rendering toast notifications used in /app/client-utils.ts and /app/components/DraftModeToast.tsx */}
           <Toaster />

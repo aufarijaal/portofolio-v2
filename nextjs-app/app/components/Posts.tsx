@@ -42,7 +42,7 @@ const Posts = ({
   heading?: string;
   subHeading?: string;
 }) => (
-  <div>
+  <div className="mx-auto">
     {heading && (
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
         {heading}
